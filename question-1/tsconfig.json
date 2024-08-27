@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES6",              // You might already have this
+    "module": "commonjs",          // Or "esnext", depending on your setup
+    "esModuleInterop": true,       // Add this line
+    "skipLibCheck": true,          // Optional: This can avoid some issues with type definitions
+    "forceConsistentCasingInFileNames": true // Optional: Ensures consistent file naming
+  },
+  "include": [
+    "src/**/*.ts"                  // Adjust this to match your project structure
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

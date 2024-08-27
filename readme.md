@@ -2,8 +2,8 @@
 Ini adalah repository untuk mengerjakan technical test TAPG. Berikut beberapa soal yang akan dikerjakan:
 
 1. Buat fungsi dalam nodejs untuk menghitung jumlah bulatan (o) pada angka yang diinput, contoh:
-   Input : 886 -> output : 5
-   Input : 100 -> output : 2
+   * Input : 886 -> output : 5
+   * Input : 100 -> output : 2
 2. Buat grafik dalam nodejs untuk penduduk Indonesia tahun 2024
 3. Jika dalam 1 projek terdapat 3 branch pada repository:
     * Development : terdapat penambahan fitur A
