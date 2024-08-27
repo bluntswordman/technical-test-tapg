@@ -5,14 +5,18 @@ const dataMapping = {
   0: 1
 }
 
-export const countingO = (value: string) => {
+const countingO = (value) => {
   let totalO = 0
 
-  value.split("").forEach((number: string) => {
+  value.split("").forEach((number) => {
     if (dataMapping.hasOwnProperty(parseInt(number))) {
       totalO += dataMapping[number]
     }
   })
 
   return totalO
+}
+
+module.exports = {
+  countingO
 }

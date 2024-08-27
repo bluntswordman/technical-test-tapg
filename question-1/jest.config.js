@@ -1,7 +1,4 @@
-import type { Config } from 'jest';
-
-const config: Config = {
-  preset: 'ts-jest',                // Use ts-jest to handle TypeScript files
+module.exports = {   // Use ts-jest to handle TypeScript files
   testEnvironment: 'node',          // Set the test environment to Node.js
   moduleFileExtensions: ['ts', 'js'], // Recognize .ts and .js files
   verbose: true,                    // Display individual test results with the test suite hierarchy
@@ -12,8 +9,6 @@ const config: Config = {
     '/dist/',
   ],
   moduleNameMapper: {               // Map module paths for easier imports
-    '^@services/(.*)$': '<rootDir>/services/$1',
+    '^@services/(.*)$': '<rootDir>/helpers/$1',
   },
-};
-
-export default config;
+}
