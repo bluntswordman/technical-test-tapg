@@ -1,29 +1,29 @@
-const {UserRepositories} = require('../repositories');
+const {UserRepository} = require('../repositories');
 const {User} = require('../models');
 
 let userCounter = 1
 
 class UserService {
     getAllUsers() {
-        return UserRepositories.getAll();
+        return UserRepository.getAll();
     }
 
     getUserById(id) {
-        return UserRepositories.getById(id);
+        return UserRepository.getById(id);
     }
 
     createUser(name, email, age, bod) {
         const id = userCounter++
         const user = new User(id, name, email, age, bod);
-        return UserRepositories.create(user);
+        return UserRepository.create(user);
     }
 
     updateUser(id, userData) {
-        return UserRepositories.update(id, userData);
+        return UserRepository.update(id, userData);
     }
 
     deleteUser(id) {
-        return UserRepositories.delete(id);
+        return UserRepository.delete(id);
     }
 }
 
