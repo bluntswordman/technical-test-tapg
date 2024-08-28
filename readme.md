@@ -11,4 +11,4 @@ Ini adalah repository untuk mengerjakan technical test TAPG. Berikut beberapa so
     * Production  : ditemukan issue yang harus diperbaiki saat itu juga
 
    Apa yang harus dilakukan supaya issue dapat diperbaiki serta branch QA & Development tidak terjadi conflict dan tetap up-to-date terhadap perbaikan issue?
-4. Temukan dan perbaiki issue yang terdapat pada program terlampir
+4. Temukan dan perbaiki issue yang terdapat pada program terlampir ( Code telah di konversi dari _**React single apps**_ menjadi _**Vite + React**_ )
