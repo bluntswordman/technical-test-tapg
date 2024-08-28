@@ -1,5 +1,5 @@
 const {ChartJSNodeCanvas} = require('chartjs-node-canvas');
-const {parseCSV} = require('../parser/parseCsv');
+const {parseCSV} = require('../parser/ParseCsv');
 const fs = require('fs');
 
 const width = 1000;

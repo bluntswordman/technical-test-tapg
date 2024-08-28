@@ -1,4 +1,4 @@
-const {countingO} = require('../src/services/countO')
+const {countingO} = require('../src/services/CountO')
 
 test('should return count o as expected', () => {
     const dataTest = [

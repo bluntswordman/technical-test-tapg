@@ -1,5 +1,5 @@
 const path = require('path');
-const { createChart } = require('./services/chartServices');
+const { createChart } = require('./services/ChartServices');
 
 const csvFilePath = path.resolve(__dirname, '../assets/jumlah-penduduk-indonesia-2024-per-provinsi.csv');
 const outputImagePath = path.resolve(__dirname, 'indonesia-population-chart.png');

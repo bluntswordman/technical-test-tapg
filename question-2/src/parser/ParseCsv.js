@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const csv = require('csv-parser');
 
-function parseCSV(filePath) {
+function parseCsv(filePath) {
     return new Promise((resolve, reject) => {
         const results = [];
 
@@ -23,4 +23,4 @@ function parseCSV(filePath) {
     });
 }
 
-module.exports = { parseCSV };
+module.exports = { parseCSV: parseCsv };
