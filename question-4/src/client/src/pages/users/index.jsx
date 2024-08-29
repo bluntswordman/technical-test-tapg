@@ -1,34 +1,34 @@
-import React, {useEffect, useState} from "react";
-import {getAll} from "./services/user.service.js";
-import {CCol, CContainer, CRow} from "@coreui/react";
-import UserForm from "./components/UserForm.jsx";
-import UserTable from "./components/UserTable.jsx";
-import {defaultUser} from "../../helpers/Default.js";
+import { CCol, CContainer, CRow } from '@coreui/react';
+import { useCallback, useEffect, useState } from 'react';
+
+import { UserForm, UserTable } from './components';
+import { getAll } from './services/user.service.js';
 
 export default function UserPage() {
-    const [users, setUsers] = useState([])
-    const [selectedUser, setSelectedUser] = useState(defaultUser)
-    const [isNotValid, setIsNotValid] = useState(true)
+  const [users, setUsers] = useState([]);
 
-    useEffect(() => {
-        const data = async () => {
-            return await getAll()
-        }
+  const fetchUsers = useCallback(async () => {
+    const response = await getAll();
+    setUsers(response.data);
+  }, []);
 
-        data().then(response => setUsers(response.data))
-    }, [])
+  useEffect(() => {
+    fetchUsers();
+  }, [fetchUsers]);
 
-    return (<CContainer>
-            <CRow className="my-5">
-                <h1 className="fs-1 text-center">User Management</h1>
-            </CRow>
-            <CRow>
-                <CCol>
-                    <UserForm setUsers={setUsers} selectedUser={selectedUser} setSelectedUser={setSelectedUser}
-                              isNotValid={isNotValid} setIsNotValid={setIsNotValid}/>
-                    <UserTable users={users} setSelectedUser={setSelectedUser} setUsers={setUsers}
-                               setIsNotValid={setIsNotValid}/>
-                </CCol>
-            </CRow>
-        </CContainer>)
+  return (
+    <CContainer>
+      <CRow className='my-5'>
+        <h1 className='fs-1 text-center'>User Management</h1>
+      </CRow>
+      <CRow>
+        <CCol xs={6} sm={12}>
+          <UserForm {...{ fetchUsers }} />
+        </CCol>
+        <CCol xs={6} sm={12}>
+          <UserTable {...{ users, fetchUsers }} />
+        </CCol>
+      </CRow>
+    </CContainer>
+  );
 }
